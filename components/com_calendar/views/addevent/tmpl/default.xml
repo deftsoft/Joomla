@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="Add Event">
+                <message>Allows users to add an event to the calendar.</message>
+        </layout>
+</metadata>

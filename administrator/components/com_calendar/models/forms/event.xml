@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+                        name="id"
+                        type="hidden"
+                />
+                <field
+                        name="name"
+                        type="text"
+                        label="COM_CALENDAR_EVENT_NAME_LABEL"
+                        description="COM_CALENDAR_EVENT_NAME_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+						required="true"
+                />
+                <field
+                        name="alias"
+                        type="text"
+                        label="COM_CALENDAR_EVENT_ALIAS_LABEL"
+                        description="COM_CALENDAR_EVENT_ALIAS_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field 
+                		name="date"
+                		type="calendar"
+                		label="COM_CALENDAR_EVENT_DATE_LABEL"
+                		description="COM_CALENDAR_EVENT_DATE_DESC"
+                		class="inputbox"
+                		format="%Y-%m-%d"
+                		size="22"
+                		filter="user_utc"
+						required="true"
+                />
+                <field
+                        name="website"
+                        type="text"
+                        label="COM_CALENDAR_EVENT_WEBSITE_LABEL"
+                        description="COM_CALENDAR_EVENT_WEBSITE_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="location"
+                        type="text"
+                        label="COM_CALENDAR_EVENT_LOCATION_LABEL"
+                        description="COM_CALENDAR_EVENT_LOCATION_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                />
+                <field
+                        name="details"
+                        type="editor"
+                        label="COM_CALENDAR_EVENT_DETAILS_LABEL"
+                        description="COM_CALENDAR_EVENT_DETAILS_DESC"
+                        class="inputbox"
+						buttons="true"
+						filter="raw"
+						required="true"
+                />
+                <field
+                        name="contact_details"
+                        type="editor"
+                        label="COM_CALENDAR_EVENT_CONTACT_DETAILS_LABEL"
+                        description="COM_CALENDAR_EVENT_CONTACT_DETAILS_DESC"
+                        class="inputbox"
+						buttons="true"
+						filter="raw"
+						
+                />
+        </fieldset>
+
+        <fieldset name="tags" label="COM_CALENDAR_EVENT_FIELDSET_TAGS" addfieldpath="/administrator/components/com_calendar/models/fields">
+			<field 
+				name="tag_id"
+				multiple="true"
+				type="eventtag"
+			/>
+
+		</fieldset>    
+</form>

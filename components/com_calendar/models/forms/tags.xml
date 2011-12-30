@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+     
+
+        
+        <fieldset name="tags" label="Event Tags" addfieldpath="/components/com_calendar/models/fields">
+			<field 
+				name="tag_id"
+				multiple="true"
+				type="eventtags"
+				label="Event Tag"
+				description="Event Tag"
+			/>
+
+		</fieldset>
+		
+		
+        
+</form>

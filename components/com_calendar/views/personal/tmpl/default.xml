@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="Personal Calendar">
+                <message>Displays a calendar with only the events user selects to show.</message>
+        </layout>
+</metadata>

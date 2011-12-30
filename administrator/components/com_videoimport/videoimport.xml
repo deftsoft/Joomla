@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6.0" method="upgrade">
+	<name>videoimport</name>
+	<creationDate>2011-09-13</creationDate>
+	<copyright>Copyright (C) 2011. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>Gernot</author>
+	<authorEmail>testing.client@gmail.com</authorEmail>
+	<authorUrl>www.test.com</authorUrl>
+	<version>1.7.0</version>
+	<description>this component will use to import all the videos from kaltura api to joomla website</description>
+
+	<install> <!-- Runs on install -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+  		</sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+    	<sql>
+        	<file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+  		</sql>
+   </uninstall>
+
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>videoimport.php</filename>
+		<filename>controller.php</filename>
+		<filename>router.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<folder>helpers</folder>
+	</files>
+	<languages folder="site">
+		<language tag="en-GB">language/en-GB.com_videoimport.ini
+		</language>
+	</languages>
+	<administration>
+		<menu>COM_VIDEOIMPORT</menu>
+		<submenu>
+			<menu link="option=com_videoimport&amp;view=items" view="items" img="class:items" alt="Videoimport/Items">COM_VIDEOIMPORT_ITEMS</menu>
+
+        </submenu>
+		<files folder="administrator">
+			<filename>access.xml</filename>
+			<filename>config.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>videoimport.php</filename>
+			<folder>controllers</folder>
+			<folder>helpers</folder>
+			<folder>models</folder>
+			<folder>sql</folder>
+			<folder>tables</folder>
+			<folder>views</folder>
+		</files>
+		<languages folder="administrator">
+			<language tag="en-GB">language/en-GB.com_videoimport.ini
+			</language>
+			<language tag="en-GB">language/en-GB.com_videoimport.sys.ini
+			</language>
+		</languages>
+	</administration>
+</extension>
+

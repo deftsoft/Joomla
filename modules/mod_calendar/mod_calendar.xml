@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.6.0" client="site"
+	method="upgrade"
+>
+	<name>Calendar</name>
+	<author>Charlton Durie (Ambion)</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (c) 2011 Ambion</copyright>
+	<authorEmail>charlton@ambion.com.au</authorEmail>
+	<authorUrl>http://www.ambion.com.au</authorUrl>
+	<version>1.0.0</version>
+	<description>Celendar module.</description>
+	<files>
+		<filename module="mod_calendar">mod_calendar.php</filename>
+		<folder>tmpl</folder>
+			<filename>tmpl/default.php</filename>
+			<filename>tmpl/index.html</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>mod_calendar.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+
+			<fieldset name="filtering"
+				label="Module Options"
+			>
+	
+	    		<field name="count" type="text" default="0"
+					label="Count"
+					description="The number of items to display. The default value of 0 will display all articles." />
+					
+					
+				<field name="name" type="text" default="0"
+					label="Event name limit"
+					description="This will allow to enter a number which will limit the letters returned for the event name" />	
+
+				
+				<field name="details" type="text" default="0"
+					label="Event details limit"
+					description="This will allow  to enter a number which will limit the letters returned for the event details" />
+				
+			</fieldset>
+		 
+		 <fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="itemid">
+					<option
+						value="itemid"></option>
+				</field>
+			</fieldset>
+		
+		
+		</fields>
+	</config>
+</extension>
